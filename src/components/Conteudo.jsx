@@ -1,7 +1,7 @@
 /* Conteudo.jsx */
 import Artigo from "./Artigo";
 import styled from "styled-components";
-import cursos from "../api/cursos.jsx";
+import cursos from "../api/cursos.js";
 
 const StyledConteudo = styled.main`
   width: 90vw;
