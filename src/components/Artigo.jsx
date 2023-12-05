@@ -26,6 +26,8 @@ function Artigo(props) {
       <time> {props.data} </time>
       <br />
       <img src={props.imagem} alt="" />
+
+      {props.children}
     </StyledArtigo>
   );
 }
