@@ -26,6 +26,13 @@ const StyledConteudo = styled.main`
   }
 `;
 
+const dataLivros = [
+  "27-10-1991",
+  "14-05-1875",
+  "07-07-1932"
+];
+
+
 function Conteudo() {
   return (
     <StyledConteudo>
@@ -39,9 +46,24 @@ function Conteudo() {
       </p>
 
       <div className="artigos">
-        <Artigo />
-        <Artigo />
-        <Artigo />
+        <Artigo
+          icone="🧹"
+          titulo="Harry Potter"
+          descricao="Livro criado por J.K Rolling"
+          data={dataLivros[0]}
+        />
+        <Artigo
+          icone="💻"
+          titulo="PHP - Com POO" 
+          descricao="Livro de programação" 
+          data={dataLivros[1]}
+        />
+        <Artigo
+          icone="🐱‍👤" 
+          titulo="Senhor dos Anéis" 
+          descricao="Livro criado por Tokien" 
+          data={dataLivros[2]}
+        />
       </div>
     </StyledConteudo>
   );
