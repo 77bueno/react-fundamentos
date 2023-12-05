@@ -15,19 +15,19 @@ const StyledArtigo = styled.article`
   }
 `;
 
-function Artigo(props) {
+function Artigo({imagem, icone, titulo, descricao, data, children}) {
   return (
     <StyledArtigo>
       <h3> 
-        <span> {props.icone} </span>
-        {props.titulo} 
+        <span> {icone} </span>
+        {titulo} 
       </h3>
-      <p> {props.descricao} </p>
-      <time> {props.data} </time>
+      <p> {descricao} </p>
+      <time> {data} </time>
       <br />
-      <img src={props.imagem} alt="" />
+      <img src={imagem} alt="" />
 
-      {props.children}
+      {children}
     </StyledArtigo>
   );
 }
