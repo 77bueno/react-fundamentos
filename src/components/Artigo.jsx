@@ -15,19 +15,12 @@ const StyledArtigo = styled.article`
   }
 `;
 
-function Artigo({imagem, icone, titulo, descricao, data, children}) {
+function Artigo({categoria, titulo, preco}) {
   return (
     <StyledArtigo>
-      <h3> 
-        <span> {icone} </span>
-        {titulo} 
-      </h3>
-      <p> {descricao} </p>
-      <time> {data} </time>
-      <br />
-      <img src={imagem} alt="" />
-
-      {children}
+      <h3> {categoria}  </h3>
+      <p> {titulo} </p>
+      <p> {preco} </p>
     </StyledArtigo>
   );
 }

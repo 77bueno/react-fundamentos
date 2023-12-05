@@ -7,6 +7,8 @@ import imagem1 from "../assets/abra-o-livro.png";
 import imagem2 from "../assets/livro-magico.png";
 import imagem3 from "../assets/pilha-de-livros.png";
 
+import cursos from "../api/cursos.jsx";
+
 const StyledConteudo = styled.main`
   width: 90vw;
   margin: 1rem auto;
@@ -22,20 +24,17 @@ const StyledConteudo = styled.main`
   @media screen and (min-width: 650px) {
     .artigos {
       display: flex;
+      margin: auto;
+      flex-wrap: wrap;
+      width: 80%; 
       justify-content: space-between;
 
       & article {
-        width: 32%;
+        width: 48%;
       }
     }
   }
 `;
-
-const dataLivros = [
-  "27-10-1991",
-  "14-05-1875",
-  "07-07-1932"
-];
 
 
 function Conteudo() {
@@ -51,57 +50,17 @@ function Conteudo() {
       </p>
 
       <div className="artigos">
-        <Artigo
-          icone="🧙‍♂️"
-          titulo="Harry Potter"
-          descricao="Livro criado por J.K Rolling"
-          data={dataLivros[0]}
-          imagem={imagem1}
-        >
-          <h4>Volumes</h4>
-          <ul>
-            <li>A Pedra Filosofal</li>
-            <li>A Câmara Secreta</li>
-            <li>O Prisioneiro de Azkaban</li>
-          </ul>
-        </Artigo>
-
-        <Artigo
-          icone="💻"
-          titulo="PHP - Com POO" 
-          descricao="Livro de programação" 
-          data={dataLivros[1]}
-          imagem={imagem2}
-        >
-          <h4>Conteúdos principais</h4>
-          <ol>
-            <li>Programação Orientada a Objetos</li>
-            <li>Fundamentos PHP</li>
-            <li>Exercícios de Programação</li>
-          </ol>
-        </Artigo>
-
-        <Artigo
-          icone="🐱‍👤" 
-          titulo="HTML5 e CSS3" 
-          descricao="Linguagens de inicio, para o Front-End" 
-          data={dataLivros[2]}
-          imagem={imagem3}
-        >
-          <section>
-            <h4>Assuntos do Filme: </h4>
-            <details>
-              <summary>Estrutura</summary>
-              <p>HTML5 para estruturar e etc...</p>
-            </details>
-
-            <details>
-            <summary>Estilização</summary>
-              <p>CSS3 para estilizar e estilizar...</p>
-            </details>
-
-          </section>
-        </Artigo>
+        {
+          cursos.map( curso => <Artigo
+            categoria={curso.categoria}
+            titulo={curso.titulo}
+            preco={curso.preco.toLocaleString("pt-br", {
+              style: "currency",
+              currency: "BRL"
+          })} 
+          /> )
+        }
+        
       </div>
     </StyledConteudo>
   );
