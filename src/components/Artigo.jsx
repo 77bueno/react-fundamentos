@@ -24,6 +24,8 @@ function Artigo(props) {
       </h3>
       <p> {props.descricao} </p>
       <time> {props.data} </time>
+      <br />
+      <img src={props.imagem} alt="" />
     </StyledArtigo>
   );
 }
