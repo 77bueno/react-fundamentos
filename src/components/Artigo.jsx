@@ -15,10 +15,13 @@ const StyledArtigo = styled.article`
   }
 `;
 
-function Artigo({categoria, titulo, preco}) {
+function Artigo({ aoClicar, categoria, titulo, preco}) {
   return (
     <StyledArtigo>
-      <h3> {categoria}  </h3>
+      {/* O componente filho (Artigo) recebe através
+      da prop 'aoClicar' a refêrencia à
+      função exemplo 3 existente no componente pai (Conteúdo) */}
+      <h3 onClick={aoClicar}> {categoria}  </h3>
       <p> {titulo} </p>
       <p> {preco} </p>
     </StyledArtigo>

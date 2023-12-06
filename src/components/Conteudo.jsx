@@ -24,6 +24,10 @@ const StyledConteudo = styled.main`
     font-weight: bold;
   }
 
+  .espacoCima {
+    margin-top: 1rem;
+  }
+
   @media screen and (min-width: 650px) {
     .artigos {
       display: flex;
@@ -46,12 +50,20 @@ function Conteudo() {
     alert("Exemplo 2");
   };
 
+  const exemplo3 = (valor) => {
+    alert(`Exemplo 3 ${valor}`);
+  };
+
   return (
     <StyledConteudo>
       <h2>Conteúdo da aplicação</h2>
 
-      <button onClick={exemplo2}>Exemplo 2</button>
+      <button onClick={exemplo2}>Exemplo 2</button> 
+      
+      <br />
 
+      <button className="espacoCima" onClick={exemplo3}>Exemplo 3</button>
+      {/* Acionando o evento/função através do Conteúdo [pai] */}
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
         labore? Officia quae quo a quas excepturi distinctio sint voluptas
@@ -62,6 +74,10 @@ function Conteudo() {
       <div className="artigos">
         {
           cursos.map( curso => <Artigo
+            /* É necessário criar uma prop para passar a chamada/referência
+            da função do componente pai 
+            handleClick={ () => { exemplo3(curso.categoria) } } */
+            aoClicar={ () => {exemplo3(curso.categoria)} }
             categoria={curso.categoria}
             titulo={curso.titulo}
             preco={curso.preco.toLocaleString("pt-br", {
