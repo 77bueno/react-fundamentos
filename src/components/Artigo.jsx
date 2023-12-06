@@ -18,7 +18,7 @@ const StyledArtigo = styled.article`
 function Artigo({ aoClicar, categoria, titulo, preco}) {
   return (
     <StyledArtigo>
-      {/* O componente filho (Artigo) recebe através
+      {/*  O componente filho (Artigo) recebe através
       da prop 'aoClicar' a refêrencia à
       função exemplo 3 existente no componente pai (Conteúdo) */}
       <h3 onClick={aoClicar}> {categoria}  </h3>
