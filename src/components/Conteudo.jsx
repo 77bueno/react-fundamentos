@@ -62,7 +62,7 @@ function Conteudo() {
       
       <br />
 
-      <button className="espacoCima" onClick={exemplo3}>Exemplo 3</button>
+      <button className="espacoCima" onClick={ () => exemplo3("Estou com o Pai") }>Exemplo 3</button>
       {/* Acionando o evento/função através do Conteúdo [pai] */}
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
@@ -79,6 +79,7 @@ function Conteudo() {
             handleClick={ () => { exemplo3(curso.categoria) } } */
             aoClicar={ () => {exemplo3(curso.categoria)} }
             categoria={curso.categoria}
+            key={curso.id}
             titulo={curso.titulo}
             preco={curso.preco.toLocaleString("pt-br", {
               style: "currency",
