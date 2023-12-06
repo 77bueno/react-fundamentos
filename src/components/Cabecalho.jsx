@@ -1,5 +1,18 @@
 /* Cabecalho.jsx */
+import { useState } from "react";
 import Menu from "./Menu";
+
+function Cabecalho() {
+  const [titulo, setTitulo] = useState("Olá Mundo!");
+
+  return (
+    <StyledCabecalho>
+      <h1>Olá React! 😎</h1>
+      <hr />
+      <Menu />
+    </StyledCabecalho>
+  );
+}
 
 /* Importação da lib Styled Components */
 import styled from "styled-components";
@@ -19,15 +32,4 @@ const StyledCabecalho = styled.header`
     margin: 8px auto;
   }
 `;
-
-function Cabecalho() {
-  return (
-    <StyledCabecalho>
-      <h1>Olá React! 😎</h1>
-      <hr />
-      <Menu />
-    </StyledCabecalho>
-  );
-}
-
 export default Cabecalho;
