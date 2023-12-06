@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 
 const StyledArtigo = styled.article`
@@ -15,9 +16,15 @@ const StyledArtigo = styled.article`
   }
 `;
 
-function Artigo({categoria, titulo, preco}) {
+function Artigo({categoria, titulo, preco}) { 
+  const [corP, setCor] = useState("lavender");
+
+  const mudarCor = () => {
+    corP == "lavender" ? setCor("#ca5aca") :  setCor("lavender"); 
+  };
+
   return (
-    <StyledArtigo>
+    <StyledArtigo onClick={mudarCor} style={{backgroundColor: corP}}>
       <h3> {categoria}  </h3>
       <p> {titulo} </p>
       <p> {preco} </p>
