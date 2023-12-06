@@ -15,6 +15,15 @@ const StyledConteudo = styled.main`
     padding: 0.2rem 0;
   }
 
+  button {
+    background-color: purple;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+  }
+
   @media screen and (min-width: 650px) {
     .artigos {
       display: flex;
@@ -32,9 +41,16 @@ const StyledConteudo = styled.main`
 
 
 function Conteudo() {
+
+  const exemplo2 = () => {
+    alert("Exemplo 2");
+  };
+
   return (
     <StyledConteudo>
       <h2>Conteúdo da aplicação</h2>
+
+      <button onClick={exemplo2}>Exemplo 2</button>
 
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
