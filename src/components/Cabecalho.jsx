@@ -3,11 +3,23 @@ import { useState } from "react";
 import Menu from "./Menu";
 
 function Cabecalho() {
-  const [titulo, setTitulo] = useState("Olá Mundo!");
+   /* Usando gerenciamento de states
+  Aqui definimos a chamada de uma função especial do 
+  React: 'useState'. Esta e outras funções iniciadas com o prefixo
+  'use' são conhecidas como React Hooks. 
+  
+  No caso do useState, usando desestruturação, criamos
+  uma variável que representa o valor do state (titulo)
+  e uma função responsável por atualizar o state (setTitulo)  */
+  const [titulo, setTitulo] = useState("Olá React!");
+
+  const mudarTitulo = () => {
+      setTitulo("Olá Mundo! 🍇");
+  };
 
   return (
     <StyledCabecalho>
-      <h1>Olá React! 😎</h1>
+      <h1>{titulo}</h1>
       <hr />
       <Menu />
     </StyledCabecalho>
