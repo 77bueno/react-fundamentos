@@ -66,7 +66,7 @@ function Conteudo() {
          então mostre a mensagem */}
          { quantidade === 0 && (
           <p style={{color: "red", textAlign: "center"}}>
-          Não há cursos desta categoria!
+             Não há cursos desta categoria!
           </p>
          )}
       </div>
