@@ -28,9 +28,7 @@ function Conteudo() {
     return curso.categoria === categoria  || categoria === null;
   });
 
-  const retirarFiltro = () => {
-    return setCategoria(null); 
-  };
+  const retirarFiltro = () => setCategoria(null);
 
   return (
     <StyledConteudo>
@@ -50,6 +48,7 @@ function Conteudo() {
          <button onClick={aplicarFiltro}>Front-End</button> 
          <button onClick={aplicarFiltro}>Back-End</button> 
          <button onClick={aplicarFiltro}>Mobile</button>
+         <button onClick={aplicarFiltro}>Full-Stack</button>
          <button onClick={retirarFiltro}>Limpar Filtro 🧹</button>
          </p>
 
