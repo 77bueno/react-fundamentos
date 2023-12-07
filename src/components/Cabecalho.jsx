@@ -11,7 +11,7 @@ function Cabecalho() {
   No caso do useState, usando desestruturação, criamos
   uma variável que representa o valor do state (titulo)
   e uma função responsável por atualizar o state (setTitulo)  */
-  const [titulo, setTitulo] = useState("Olá React!");
+  const [titulo, setTitulo] = useState("fala pessoal");
 
   const mudarTitulo = () => {
       setTitulo("Olá Mundo! 🍇");
@@ -35,6 +35,7 @@ const StyledCabecalho = styled.header`
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
+  padding-top: 1.2rem;
 
   hr {
     width: 50%;
