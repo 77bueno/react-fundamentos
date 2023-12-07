@@ -1,4 +1,13 @@
 # Fundamentos de React
+## 11-navegacao-usando-rotas
+
+O React suporta a navegação/links como Single Page Application (SPA) usando uma biblioteca adicional chamada **React Router DOM**.
+
+Portanto, é necessário instalar esta dependência:
+
+`npm install react-router-dom`
+
+---
 
 ## Branch: 09-gerenciamento-de-estados-dos-componentes
 
