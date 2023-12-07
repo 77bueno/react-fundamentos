@@ -4,7 +4,7 @@ import styled from "styled-components";
 import cursos from "../api/cursos.js";
 import { useState } from "react";
 
-function Conteudo() {
+function Cursos() {
   /* Criando um gerenciador de state para mudança/filtro
     de categorias. Inicialmente, como começa como null pois ainda não
     temos uma escolha/seleção de categoria (aparece tudo). */
@@ -34,7 +34,7 @@ function Conteudo() {
   const quantidade = cursosFiltrados.length;
 
   return (
-    <StyledConteudo>
+    <StyledCursos>
       <h2>Conteúdo da aplicação</h2>
 
       <p>
@@ -87,17 +87,11 @@ function Conteudo() {
         }
         
       </div>
-    </StyledConteudo>
+    </StyledCursos>
   );
 }
 
-const StyledConteudo = styled.main`
-  width: 90vw;
-  margin: 1rem auto;
-  background-color: aliceblue;
-  padding: 1rem;
-  box-shadow: darkblue 0 0 1px inset;
-
+const StyledCursos = styled.section`
   .filtros {
     margin: auto;
     text-align: center;
@@ -116,11 +110,6 @@ const StyledConteudo = styled.main`
     margin: 0.5rem 0.5rem;
   }
 
-  h2,
-  p {
-    padding: 0.2rem 0;
-  }
-
   @media screen and (min-width: 650px) {
     .artigos {
       display: flex;
@@ -136,4 +125,4 @@ const StyledConteudo = styled.main`
   }
 `;
 
-export default Conteudo;
+export default Cursos;
