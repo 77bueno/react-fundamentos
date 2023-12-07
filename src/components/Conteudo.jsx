@@ -49,7 +49,11 @@ function Conteudo() {
          <button onClick={aplicarFiltro}>Back-End</button> 
          <button onClick={aplicarFiltro}>Mobile</button>
          <button onClick={aplicarFiltro}>Full-Stack</button>
-         <button onClick={retirarFiltro}>Limpar Filtro 🧹</button>
+         
+         { categoria && (
+          <button onClick={retirarFiltro}>Limpar Filtro 🧹</button>
+
+         )}
          </p>
 
          {/* Renderização Condicional
