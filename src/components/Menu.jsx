@@ -10,7 +10,7 @@ const StyledMenu = styled.nav`
 
   .active {
     background-color: #ffffff;
-    color: #000000;
+    color: #000000; 
   }
 
   a {
