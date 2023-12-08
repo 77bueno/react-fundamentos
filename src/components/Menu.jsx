@@ -8,6 +8,11 @@ const StyledMenu = styled.nav`
   justify-content: space-evenly;
   align-items: center;
 
+  .active {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
   a {
     color: white;
     text-decoration: none;
