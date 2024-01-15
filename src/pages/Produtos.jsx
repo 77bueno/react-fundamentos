@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 function Produtos(){
+
+    const [produtos, SetProdutos] = useState([]);
 
     const carregarDados = async () => {
         try {
@@ -11,7 +15,7 @@ function Produtos(){
     }
 
     carregarDados();
-    
+
     return <h2>Produtos</h2>
 }
 
