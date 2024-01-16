@@ -9,7 +9,7 @@ function DetalhesProduto(){
     neste caso, o parâmetro chamado "id". */
     const { id } = useParams();
 
-    const [detalhesprodutos, setDetalhesProdutos] = useState([]);
+    const [detalhesprodutos, setDetalhesProdutos] = useState({});
     const [loading, setLoading] = useState(true);
 
     useEffect( () => {
@@ -36,7 +36,7 @@ function DetalhesProduto(){
                     <h2> {detalhesprodutos.title} </h2>
                     <p><b>Categoria: </b> {detalhesprodutos.category}</p>
                     <p>{detalhesprodutos.description}</p>
-                    <img src={detalhesprodutos.image} alt="" />
+                    <p><img style={{maxWidth: "10vw"}} src={detalhesprodutos.image} alt="" /></p>
                 </div>
             }
         </article>
