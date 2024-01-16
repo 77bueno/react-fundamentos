@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Produtos from "./pages/Produtos";
 import Contato from "./pages/Contato";
 import Rodape from "./components/Rodape";
+import DetalhesProduto from "./pages/DetalhesProduto";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -15,7 +16,8 @@ function App() {
         <Container>
           <Routes>
             <Route Component={Home} exact path="/" />
-            <Route Component={Produtos} path="/produtos"  />
+            <Route Component={Produtos} path="/produtos" />
+            <Route Component={DetalhesProduto} path="/produtos/:id" />
             <Route Component={Contato} path="/contato" />
           </Routes>
         </Container>

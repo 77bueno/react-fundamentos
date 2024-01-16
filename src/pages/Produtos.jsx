@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import imagemLoading from "../assets/loading.svg";
+import { Link } from "react-router-dom";
 
 function Produtos(){
      /* O state "produtos" é iniciado como um array vazio.
@@ -37,7 +38,7 @@ function Produtos(){
         carregarDados();
     }, [] ); 
 
-    return (
+    return (    
         <article>
             <h2>Produtos</h2>
 
@@ -51,6 +52,7 @@ function Produtos(){
                         <h3> {produto.title} </h3>
                         <p>Preço: {produto.price} </p>
                         <p> {produto.description} </p>
+                        <p> <Link to={`/produtos/${produto.id}`}> Ver Detalhes </Link> </p>
                     </section>
                 })
             ) }
